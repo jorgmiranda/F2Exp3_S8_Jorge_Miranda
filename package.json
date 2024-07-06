@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:ActividadSumativa2": "node dist/actividad-sumativa2/server/server.mjs"
+    "serve:ssr:ActividadSumativa3": "node dist/actividad-sumativa2/server/server.mjs"
   },
   "private": true,
   "dependencies": {

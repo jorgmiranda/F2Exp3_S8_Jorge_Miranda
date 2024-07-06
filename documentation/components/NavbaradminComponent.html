@@ -134,6 +134,12 @@
     </p>
 
 
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
 
 
 <section data-compodoc="block-metadata">
@@ -150,6 +156,12 @@
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -197,6 +209,24 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#listaUsuarios" >listaUsuarios</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Optional</span>
+                                <a href="#usuariologeado" >usuariologeado</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -208,6 +238,15 @@
                         <ul class="index-list">
                             <li>
                                 <a href="#apagarSesionAdmin" >apagarSesionAdmin</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#obtenerTodosLosUsuarios" >obtenerTodosLosUsuarios</a>
+                            </li>
+                            <li>
+                                <a href="#verificarSesionUsuario" >verificarSesionUsuario</a>
                             </li>
                         </ul>
                     </td>
@@ -227,12 +266,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(router: Router)</code>
+<code>constructor(platformId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a>, router: Router, usuarioService: <a href="../injectables/UsuarioService.html" target="_self">UsuarioService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:40</a></div>
                             </td>
                         </tr>
 
@@ -251,6 +290,24 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
+                                                        <td>platformId</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" >Object</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Identificado de la plataforma (Navegador o Servidor)</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
                                                         <td>router</td>
                                                   
                                                         <td>
@@ -264,6 +321,24 @@
                                                         <td>
                                                                 <ul>
 <li>Servicio de enrutamiento de Angular</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>usuarioService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de de Usuarios utilizado para consumir los servicios REST</li>
 </ul>
 
                                                         </td>
@@ -306,8 +381,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="38"
-                                    class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:38</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="90"
+                                    class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:90</a></div>
                         </td>
                     </tr>
 
@@ -325,16 +400,215 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="54"
+                                    class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:54</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Metodo de inicialización del componente
+Inicializa la barra de navegación para obtener el usuario que tiene la sesión iniciada</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="obtenerTodosLosUsuarios"></a>
+                    <span class="name">
+                        <span ><b>obtenerTodosLosUsuarios</b></span>
+                        <a href="#obtenerTodosLosUsuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>obtenerTodosLosUsuarios()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="66"
+                                    class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:66</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene todos los usuarios registrados en el JSON REST
+Una vez obtenidos, llama al metodo verificarSessionUsuario</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="verificarSesionUsuario"></a>
+                    <span class="name">
+                        <span ><b>verificarSesionUsuario</b></span>
+                        <a href="#verificarSesionUsuario"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>verificarSesionUsuario()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Verifica que usuario tiene la bandera sesionIniciada como true
+y lo recupera para usarlo en el modulo</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaUsuarios"></a>
+                    <span class="name">
+                        <span ><b>listaUsuarios</b></span>
+                        <a href="#listaUsuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Usuario.html" target="_self" >Usuario[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de arreglo de lista de usuarios</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usuariologeado"></a>
+                    <span class="name">
+                            <span class="modifier">Optional</span>
+                        <span ><b>usuariologeado</b></span>
+                        <a href="#usuariologeado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Usuario.html" target="_self" >Usuario</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="35" class="link-to-prism">src/app/components/admin/navbaradmin/navbaradmin.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Instancia de usuario utilizando la interface Usuario</p>
+</div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
 </section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, Inject, PLATFORM_ID, ViewEncapsulation } from &#x27;@angular/core&#x27;;
 import { RouterModule } from &#x27;@angular/router&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
+import { isPlatformBrowser } from &#x27;@angular/common&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { Usuario } from &#x27;../../../model/usuario&#x27;;
+import { UsuarioService } from &#x27;../../../services/usuario.service&#x27;;
 
 /**
  * @description
@@ -351,26 +625,85 @@ import { Router } from &#x27;@angular/router&#x27;;
   standalone: true,
   imports: [RouterModule,CommonModule],
   templateUrl: &#x27;./navbaradmin.component.html&#x27;,
-  styleUrl: &#x27;./navbaradmin.component.scss&#x27;
+  styleUrl: &#x27;./navbaradmin.component.scss&#x27;,
+  providers: [UsuarioService]
 })
 /**
  * Navbar Admin component
  */
-export class NavbaradminComponent {
+export class NavbaradminComponent implements OnInit{
+
+    /**
+   * Instancia de usuario utilizando la interface Usuario
+   */
+    usuariologeado?: Usuario;
 
   /**
-   * @constructor
-   * @param router - Servicio de enrutamiento de Angular
+   * Instancia de arreglo de lista de usuarios
    */
-  constructor(private router:Router) { }
+  listaUsuarios: Usuario[] &#x3D; [];
 
+  /**
+   * 
+   * @param platformId - Identificado de la plataforma (Navegador o Servidor)
+   * @param router - Servicio de enrutamiento de Angular
+   * @param usuarioService - Servicio de de Usuarios utilizado para consumir los servicios REST
+   */
+  constructor(@Inject(PLATFORM_ID) private platformId: Object, private router:Router, private usuarioService: UsuarioService) { }
+
+   /**
+   * Metodo de inicialización del componente
+   * Inicializa la barra de navegación para obtener el usuario que tiene la sesión iniciada
+   */
+  ngOnInit(): void {
+    // Permite determinar que el codigo se ejecute en el navegador
+    if (isPlatformBrowser(this.platformId)) {
+      this.obtenerTodosLosUsuarios();
+
+    }
+  }
+
+  /**
+   * Obtiene todos los usuarios registrados en el JSON REST
+   * Una vez obtenidos, llama al metodo verificarSessionUsuario
+   */
+  obtenerTodosLosUsuarios():void{
+    this.usuarioService.obtenerTodosLosUsuarios().subscribe(data &#x3D;&gt; {
+      this.listaUsuarios &#x3D; data;
+      this.verificarSesionUsuario();
+    });
+  }
+  
+  /**
+   * Verifica que usuario tiene la bandera sesionIniciada como true
+   * y lo recupera para usarlo en el modulo
+   */
+  verificarSesionUsuario(): void {
+    if (this.listaUsuarios) {
+      this.listaUsuarios.forEach((usuario) &#x3D;&gt; {
+        if (usuario.sesionIniciada) {
+          this.usuariologeado &#x3D; usuario;
+        }
+      });
+    }
+  }
 
   /**
    * Cierra la sesión del administrador y regresa a la pagina de inicio
    */
   apagarSesionAdmin(){
-      alert(&quot;Se ha cerrado la sesion&quot;);
+    if(this.usuariologeado){
+      this.usuariologeado.sesionIniciada &#x3D; false;
+      this.usuarioService.actualizarUsuario(this.usuariologeado.id, this.usuariologeado ).subscribe(edit &#x3D;&gt; {
+        console.log(&#x27;Usuario Editado Exitosamente&#x27;, edit);
+        this.obtenerTodosLosUsuarios();  
+      }, error &#x3D;&gt; {
+        console.error(&#x27;Ocurrio un error al agregar un usuario:&#x27;, error);
+      });
+      this.usuariologeado &#x3D; undefined;
+      alert(&quot;Sesion Cerrada&quot;);
       this.router.navigate([&#x27;inicio&#x27;]);
+    }
   }
 
 }
@@ -410,6 +743,9 @@ export class NavbaradminComponent {
                     &lt;/li&gt;
                     &lt;li&gt;
                         &lt;a class&#x3D;&quot;nav-link navlink&quot; routerLink&#x3D;&quot;/admin/editarProducto/cuidado_capilar&quot;&gt;Administrar - Cuidado Capilar&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a class&#x3D;&quot;nav-link navlink&quot; routerLink&#x3D;&quot;/admin/mantenedorUsuarios&quot;&gt;Mantenedor Usuarios&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li class&#x3D;&quot;nav-item dropdown&quot;&gt;
                         &lt;a class&#x3D;&quot;nav-link dropdown-toggle&quot; href&#x3D;&quot;#&quot; id&#x3D;&quot;navbarDropdown&quot; role&#x3D;&quot;button&quot; data-bs-toggle&#x3D;&quot;dropdown&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
@@ -454,8 +790,8 @@ export class NavbaradminComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header>    <img src="../assets/img/iconos/blob.jpg" alt="Logo" class="logo">    <h1 class="titulo">Clean & Shine</h1>    <div class="container-icon">            </div>    </header><div class="primer-contenedor">    <nav class="navbar navbar-expand-lg navbar-light bg-light barra-nav">        <div class="container-fluid">            <a class="navbar-brand" routerLink="/admin/inicio">Clean & Shine Administración</a>            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>            </button>            <div class="collapse navbar-collapse" id="navbarNav">                <ul class="navbar-nav menu">                    <li class="nav-item">                        <a class="nav-link navlink" routerLink="/admin/inicio">Inicio</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/cuidado_ropa">Administrar - Cuidado de Ropa</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/limpieza">Administrar - Limpieza</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/papel">Administrar - Papeles</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/cuidado_capilar">Administrar - Cuidado Capilar</a>                    </li>                    <li class="nav-item dropdown">                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">                            Usuario                        </a>                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                            <li><a class="dropdown-item menu-usuario" href="#">Usuario: Administrador</a></li>                            <li><hr class="dropdown-divider cerrarSesion-sep"></li>                            <li><a class="dropdown-item cerrarSesion" href="#" (click)="apagarSesionAdmin()">Cerrar Sesión</a></li>                        </ul>                    </li>                </ul>            </div>        </div>    </nav></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
+        var COMPONENT_TEMPLATE = '<div><header>    <img src="../assets/img/iconos/blob.jpg" alt="Logo" class="logo">    <h1 class="titulo">Clean & Shine</h1>    <div class="container-icon">            </div>    </header><div class="primer-contenedor">    <nav class="navbar navbar-expand-lg navbar-light bg-light barra-nav">        <div class="container-fluid">            <a class="navbar-brand" routerLink="/admin/inicio">Clean & Shine Administración</a>            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>            </button>            <div class="collapse navbar-collapse" id="navbarNav">                <ul class="navbar-nav menu">                    <li class="nav-item">                        <a class="nav-link navlink" routerLink="/admin/inicio">Inicio</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/cuidado_ropa">Administrar - Cuidado de Ropa</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/limpieza">Administrar - Limpieza</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/papel">Administrar - Papeles</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/editarProducto/cuidado_capilar">Administrar - Cuidado Capilar</a>                    </li>                    <li>                        <a class="nav-link navlink" routerLink="/admin/mantenedorUsuarios">Mantenedor Usuarios</a>                    </li>                    <li class="nav-item dropdown">                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">                            Usuario                        </a>                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                            <li><a class="dropdown-item menu-usuario" href="#">Usuario: Administrador</a></li>                            <li><hr class="dropdown-divider cerrarSesion-sep"></li>                            <li><a class="dropdown-item cerrarSesion" href="#" (click)="apagarSesionAdmin()">Cerrar Sesión</a></li>                        </ul>                    </li>                </ul>            </div>        </div>    </nav></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NavbaradminComponent'};
 </script>

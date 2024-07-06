@@ -163,6 +163,7 @@
                 <td class="col-md-9">
                                 <code><a href="../components/NavbaradminComponent.html" target="_self" >NavbaradminComponent</a></code>
                                 <code><a href="../components/FooterComponent.html" target="_self" >FooterComponent</a></code>
+                            <code>HttpClientModule</code>
                 </td>
             </tr>
 
@@ -204,6 +205,7 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
 import { NavbaradminComponent } from &#x27;../navbaradmin/navbaradmin.component&#x27;;
 import { FooterComponent } from &#x27;../../../footer/footer.component&#x27;;
+import { HttpClientModule } from &#x27;@angular/common/http&#x27;;
 
 /**
  * @description
@@ -214,7 +216,7 @@ import { FooterComponent } from &#x27;../../../footer/footer.component&#x27;;
 @Component({
   selector: &#x27;app-inicio-admin&#x27;,
   standalone: true,
-  imports: [NavbaradminComponent, FooterComponent],
+  imports: [NavbaradminComponent, FooterComponent, HttpClientModule],
   templateUrl: &#x27;./inicio-admin.component.html&#x27;,
   styleUrl: &#x27;./inicio-admin.component.scss&#x27;
 })
@@ -266,7 +268,7 @@ export class InicioAdminComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><app-navbaradmin></app-navbaradmin><main class="container mt-5">    <div class="row">        <div class="col-12 col-md-8 col-lg-6">            <h1 class="display-4">Bienvenidos a la pyme Clean & Shine</h1>            <p class="lead mensaje">Bienvenido Administrador!</p>        </div>    </div></main><br><br><app-footer></app-footer></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'InicioAdminComponent'};
 </script>
