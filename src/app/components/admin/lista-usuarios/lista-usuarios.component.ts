@@ -6,7 +6,9 @@ import { NavbaradminComponent } from '../navbaradmin/navbaradmin.component';
 import { FooterComponent } from '../../../footer/footer.component';
 import { Usuario } from '../../../model/usuario';
 import { UsuarioService } from '../../../services/usuario.service';
-
+/**
+ * Se declara la variable de bootstrap para el modal
+ */
 declare var bootstrap: any;
 
 @Component({
@@ -17,6 +19,9 @@ declare var bootstrap: any;
   styleUrl: './lista-usuarios.component.scss',
   providers: [UsuarioService]
 })
+/**
+ * Componente encargado de administrar el mantenedor de Usuarios
+ */
 export class ListaUsuariosComponent {
 
   usuarios: any[] = [];
@@ -30,8 +35,17 @@ export class ListaUsuariosComponent {
   //Roles
   rolesOpciones = ['Usuario', 'Administrador']
 
+  /**
+   * @constructor
+   * @param usuarioService - Servicio de de Usuarios utilizado para consumir los servicios REST
+   * @param fb - Servicio de creación de formulario de Angular
+   */
   constructor(private usuarioService: UsuarioService, private fb: FormBuilder) { }
 
+   /**
+   * Metodo de inicialización del componente.
+   * Inicializa el formulario de edición/creación, modal y cargar los usuarios
+   */
   ngOnInit(): void {
     this.obtenerTodosLosUsuarios();
     this.inicializarFormulario();
@@ -40,12 +54,19 @@ export class ListaUsuariosComponent {
 
   }
 
+  /**
+   * Obtiene todos los usuarios registrados en el JSON REST
+   * Una vez obtenidos, llama al metodo verificarSessionUsuario
+   */
   obtenerTodosLosUsuarios():void{
     this.usuarioService.obtenerTodosLosUsuarios().subscribe(data => {
       this.usuarios = data;
     });
   }
 
+  /**
+   * Inicializa el formulario de creación
+   */
   inicializarFormulario() {
     this.mantenedorForm = this.fb.group({
       nombreCompleto: ['', Validators.required],
@@ -61,6 +82,11 @@ export class ListaUsuariosComponent {
     });
   }
 
+  /**
+   * Valida que la edad del usuario sea mayor a 13 años
+   * @param control - El control del formulario que contiene la fecha de nacimiento del usuario.
+   * @returns  Un objeto con el error si el usuario es menor de edad, de lo contrario, null.
+   */
   validarEdad(control: { value: string }): { [key: string]: boolean } | null {
     if (control.value) {
       const fechaNacimiento = new Date(control.value);
@@ -72,6 +98,12 @@ export class ListaUsuariosComponent {
     return null;
   }
 
+  /**
+   * Calcula la edad de una persona basada en su fecha de nacimiento.
+   * 
+   * @param fechaNacimiento - La fecha de nacimiento del usuario.
+   * @returns La edad del usuario en años.
+   */
   calcularEdad(fechaNacimiento: Date): number {
     const hoy = new Date();
     const edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
@@ -82,12 +114,22 @@ export class ListaUsuariosComponent {
     return edad;
   }
 
+  /**
+   * Valida que las contraseñas ingresadas en dos campos del formulario sean iguales.
+   * @param formGroup - El grupo de formulario que contiene los campos de las contraseñas.
+   * @returns Un objeto con el error si las contraseñas no coinciden, de lo contrario, null.
+   */
   validarContrasenasIguales(formGroup: FormGroup): { [key: string]: any } | null {
     const contrasena1 = formGroup.get('contrasenaUsuario1')?.value;
     const contrasena2 = formGroup.get('contrasenaUsuario2')?.value;
     return contrasena1 === contrasena2 ? null : { contrasenasNoCoinciden: true };
   }
 
+  /**
+   * Valida que una contraseña contenga al menos una letra mayúscula, un número y que tenga una longitud entre 6 y 18 caracteres.
+   * 
+   * @returns Una función validadora que puede ser usada en un control de formulario.
+   */
   validarContrasenaFormato(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       if (!control.value) {
@@ -99,7 +141,11 @@ export class ListaUsuariosComponent {
     };
   }
 
-  //Logica Modal
+  /**
+   * Verifica si se intenta registrar un usuario o editarlo.
+   * En caso de editarlo, recupera la información de este.
+   * @param usuario - Parametro del usuario a editar
+   */
   abrirModal(usuario?: Usuario): void {
     if (usuario) {
       this.modalTitle = 'Modificar usuario';
@@ -121,6 +167,11 @@ export class ListaUsuariosComponent {
     this.modalInstance.show();
   }
 
+  /**
+   * Verifica si el submit es para creación o edición.
+   * En caso de crear, se envia la solicitud al servicio 
+   * En caso de editar, se modifica el usuario con los parametros entregados
+   */
   submitForm(): void {
     if (this.mantenedorForm.valid) {
       const persona = this.mantenedorForm.value;
@@ -175,7 +226,10 @@ export class ListaUsuariosComponent {
     }
   }
 
-  //Logia eliminar
+  /**
+   * Eliminar el usuario de la lista
+   * @param usuario - Usuario a elminar
+   */
   eliminar(usuario: Usuario): void {
     const index = this.usuarios.findIndex((elemento: any) => elemento.id === usuario.id);
     

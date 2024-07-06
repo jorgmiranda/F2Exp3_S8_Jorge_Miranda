@@ -201,8 +201,8 @@ export class NavbarComponent implements OnInit {
       });
       this.sesionIniciada = false;
       this.usuariologeado = undefined;
-      alert("Sesion Cerrada");
-      this.router.navigate(['inicio']);
+      //alert("Sesion Cerrada");
+      this.router.navigate(['/inicio']);
     }
   }
 }

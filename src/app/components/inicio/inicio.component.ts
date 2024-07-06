@@ -54,11 +54,12 @@ export class InicioComponent implements OnInit{
    * Inicialia la lista de Usuarios
    */
   ngOnInit(): void {
+    this.obtenerTodosLosUsuarios();
     if (isPlatformBrowser(this.platformId)) {
       this.listaProductos = JSON.parse(sessionStorage.getItem('listaProductos') || '[]');
       //this.listaUsuarios = JSON.parse(sessionStorage.getItem('usuarios') || '[]');
       this.funcionalidadCarrito();
-      this.obtenerTodosLosUsuarios();
+      
      
       
     }

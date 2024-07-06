@@ -88,6 +88,7 @@ export class LoginComponent {
           }
         });
         if(usuarioLogeado){
+          alert("Sesión iniciada");
           console.log(usuarioActual);
           this.usuarioService.actualizarUsuario(usuarioActual.id, usuarioActual ).subscribe(edit => {
             console.log('Usuario Editado Exitosamente', edit);

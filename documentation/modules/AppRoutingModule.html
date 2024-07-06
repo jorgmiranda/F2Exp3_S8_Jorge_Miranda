@@ -139,6 +139,7 @@ import { RecuperarContrasenaComponent } from &#x27;./components/recuperar-contra
 import { EditarPerfilComponent } from &#x27;./components/usuario/editar-perfil/editar-perfil.component&#x27;;
 import { EditarProductosComponent } from &#x27;./components/admin/editar-productos/editar-productos.component&#x27;;
 import { InicioAdminComponent } from &#x27;./components/admin/inicio-admin/inicio-admin.component&#x27;;
+import { ListaUsuariosComponent } from &#x27;./components/admin/lista-usuarios/lista-usuarios.component&#x27;;
 
 export const routes: Routes &#x3D; [
     {path: &#x27;inicio&#x27;, component: InicioComponent},
@@ -149,8 +150,11 @@ export const routes: Routes &#x3D; [
     {path: &#x27;usuario/editarDatos&#x27;, component:EditarPerfilComponent},
     {path: &#x27;admin/inicio&#x27;, component:InicioAdminComponent},
     {path: &#x27;admin/editarProducto/:seccion&#x27;, component:EditarProductosComponent},
+    {path: &#x27;admin/mantenedorUsuarios&#x27;, component:ListaUsuariosComponent},
     //Pagina de inicio
+    {path: &#x27;&#x27;, redirectTo: &#x27;inicio&#x27;, pathMatch: &#x27;full&#x27;},
     {path: &#x27;**&#x27;, redirectTo: &#x27;inicio&#x27;}
+    
 ];
 
 @NgModule({

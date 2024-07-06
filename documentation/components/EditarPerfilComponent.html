@@ -146,6 +146,12 @@
 
 
 
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                </td>
+            </tr>
 
 
             <tr>
@@ -238,6 +244,9 @@
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
+                                <a href="#obtenerTodosLosUsuarios" >obtenerTodosLosUsuarios</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Private</span>
                                 <a href="#obtenerUsuario" >obtenerUsuario</a>
                             </li>
@@ -268,12 +277,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(fb: FormBuilder)</code>
+<code>constructor(usuarioService: <a href="../injectables/UsuarioService.html" target="_self">UsuarioService</a>, fb: FormBuilder)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -291,6 +300,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                                <tr>
+                                                        <td>usuarioService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UsuarioService.html" target="_self" >UsuarioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <ul>
+<li>Servicio de de Usuarios utilizado para consumir los servicios REST</li>
+</ul>
+
+                                                        </td>
+                                                </tr>
                                                 <tr>
                                                         <td>fb</td>
                                                   
@@ -347,8 +374,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="75"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:75</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="90"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:90</a></div>
                         </td>
                     </tr>
 
@@ -356,7 +383,7 @@
             <tr>
                 <td class="col-md-4">
                         <div class="io-description"><p>Metodo encargado de la actualización del usuario.
-Actualiza la información del usuario almacenado en sesión y muestra una alerta de JavaScript para notificar si el cambio fue completado.</p>
+Actualiza la información del usuario y muestra una alerta de JavaScript para notificar si el cambio fue completado.</p>
 </div>
 
                         <div class="io-description">
@@ -387,8 +414,8 @@ Actualiza la información del usuario almacenado en sesión y muestra una alerta
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="122"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:122</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="138"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:138</a></div>
                         </td>
                     </tr>
 
@@ -464,8 +491,8 @@ Actualiza la información del usuario almacenado en sesión y muestra una alerta
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="55"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:55</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="58"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:58</a></div>
                         </td>
                     </tr>
 
@@ -505,8 +532,8 @@ Ademas se agregan las validaciones de campos requeridos, email y personalizadas<
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="45"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:45</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="48"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:48</a></div>
                         </td>
                     </tr>
 
@@ -515,6 +542,46 @@ Ademas se agregan las validaciones de campos requeridos, email y personalizadas<
                 <td class="col-md-4">
                         <div class="io-description"><p>Metodo de inicialización del componente.
 Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="obtenerTodosLosUsuarios"></a>
+                    <span class="name">
+                        <span ><b>obtenerTodosLosUsuarios</b></span>
+                        <a href="#obtenerTodosLosUsuarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>obtenerTodosLosUsuarios()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="77"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene todos los usuarios registrados en el JSON REST
+Una vez obtenidos, llama al metodo verificarSessionUsuario</p>
 </div>
 
                         <div class="io-description">
@@ -547,8 +614,8 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="165"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:165</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="181"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:181</a></div>
                         </td>
                     </tr>
 
@@ -586,8 +653,8 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="149"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:149</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="165"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:165</a></div>
                         </td>
                     </tr>
 
@@ -629,8 +696,8 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="137"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:137</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="153"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:153</a></div>
                         </td>
                     </tr>
 
@@ -706,8 +773,8 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="105"
-                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:105</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:121</a></div>
                         </td>
                     </tr>
 
@@ -782,18 +849,18 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>    <code>any[]</code>
+                        <i>Type : </i>        <code><a href="../interfaces/Usuario.html" target="_self" >Usuario[]</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>JSON.parse(sessionStorage.getItem(&#x27;usuarios&#x27;) || &#x27;[]&#x27;)</code>
+                        <i>Default value : </i><code>[]</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="30" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:30</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:32</a></div>
                         </td>
                     </tr>
 
@@ -825,7 +892,7 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="26" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:26</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:28</a></div>
                         </td>
                     </tr>
 
@@ -858,7 +925,7 @@ Obtiene el usuario logeado en el sistema y crea el formulario de edición.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:34</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/components/usuario/editar-perfil/editar-perfil.component.ts:36</a></div>
                         </td>
                     </tr>
 
@@ -883,6 +950,7 @@ import { NavbarComponent } from &#x27;../../../navbar/navbar.component&#x27;;
 import { FooterComponent } from &#x27;../../../footer/footer.component&#x27;;
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, ValidationErrors, ValidatorFn, AbstractControl } from &#x27;@angular/forms&#x27;;
 import { Usuario } from &#x27;../../../model/usuario&#x27;;
+import { UsuarioService } from &#x27;../../../services/usuario.service&#x27;;
 
 /**
  * @description
@@ -895,7 +963,8 @@ import { Usuario } from &#x27;../../../model/usuario&#x27;;
   standalone: true,
   imports: [NavbarComponent, FooterComponent, ReactiveFormsModule, CommonModule],
   templateUrl: &#x27;./editar-perfil.component.html&#x27;,
-  styleUrl: &#x27;./editar-perfil.component.scss&#x27;
+  styleUrl: &#x27;./editar-perfil.component.scss&#x27;,
+  providers: [UsuarioService]
 })
 export class EditarPerfilComponent {
 
@@ -906,7 +975,7 @@ export class EditarPerfilComponent {
   /**
    * Lista de usuarios almacenados en la variable de sesión
    */
-  listaUsuarios: any[] &#x3D; JSON.parse(sessionStorage.getItem(&#x27;usuarios&#x27;) || &#x27;[]&#x27;);
+  listaUsuarios: Usuario[] &#x3D; [];
   /**
    * Instancia de usuario logeado usando la interfaz Usuario
    */
@@ -914,16 +983,17 @@ export class EditarPerfilComponent {
   /**
    * @constructor
    * @param fb - Servicio de creación de formulario de Angular
+   * @param usuarioService - Servicio de de Usuarios utilizado para consumir los servicios REST
    */
-  constructor(private fb: FormBuilder) { }
+  constructor(private usuarioService: UsuarioService, private fb: FormBuilder) { }
 
   /**
    * Metodo de inicialización del componente.
    * Obtiene el usuario logeado en el sistema y crea el formulario de edición.
    */
   ngOnInit(): void {
-    this.obtenerUsuario();
-    this.inicializarFormulario();
+    this.obtenerTodosLosUsuarios();
+    
   }
 
   /**
@@ -935,7 +1005,7 @@ export class EditarPerfilComponent {
     if (this.usuariologeado) {
       this.updateForm &#x3D; this.fb.group({
         nombreCompleto: [this.usuariologeado.nombreCompleto, Validators.required],
-        correoUsuario: [this.usuariologeado.correo, [Validators.required, Validators.email]],
+        correoUsuario: [this.usuariologeado.correoUsuario, [Validators.required, Validators.email]],
         fechaNacimientoUsuario: [this.usuariologeado.fechaNacimiento, [Validators.required, this.validarEdad.bind(this)]],
         contrasenaUsuario1: [this.usuariologeado.contrasena, [Validators.required, this.validarContrasenaFormato()]],
         contrasenaUsuario2: [this.usuariologeado.contrasena, Validators.required],
@@ -946,26 +1016,39 @@ export class EditarPerfilComponent {
     }
   }
 
+  /**
+   * Obtiene todos los usuarios registrados en el JSON REST
+   * Una vez obtenidos, llama al metodo verificarSessionUsuario
+   */
+  obtenerTodosLosUsuarios():void{
+    this.usuarioService.obtenerTodosLosUsuarios().subscribe(data &#x3D;&gt; {
+      this.listaUsuarios &#x3D; data;
+      this.obtenerUsuario();
+      this.inicializarFormulario();
+    });
+  }
+
 
   /**
    * Metodo encargado de la actualización del usuario.
-   * Actualiza la información del usuario almacenado en sesión y muestra una alerta de JavaScript para notificar si el cambio fue completado.
+   * Actualiza la información del usuario y muestra una alerta de JavaScript para notificar si el cambio fue completado.
    */
   actualizarUsuario(): void {
     if (this.updateForm.valid &amp;&amp; this.usuariologeado) {
       const nombreUsuario &#x3D; this.usuariologeado.nombreUsuario;
       const valoresFormulario &#x3D; this.updateForm.value;
       this.usuariologeado.nombreCompleto &#x3D; valoresFormulario.nombreCompleto;
-      this.usuariologeado.correo &#x3D; valoresFormulario.correoUsuario;
+      this.usuariologeado.correoUsuario &#x3D; valoresFormulario.correoUsuario;
       this.usuariologeado.fechaNacimiento &#x3D; valoresFormulario.fechaNacimientoUsuario;
       this.usuariologeado.contrasena &#x3D; valoresFormulario.contrasenaUsuario1;
       this.usuariologeado.direccionDespacho &#x3D; valoresFormulario.direccionDespacho;
 
-      const index &#x3D; this.listaUsuarios.findIndex(usuario &#x3D;&gt; usuario.nombreUsuario &#x3D;&#x3D;&#x3D; nombreUsuario);
-      if (index !&#x3D;&#x3D; -1) {
-        this.listaUsuarios[index] &#x3D; this.usuariologeado;
-        sessionStorage.setItem(&#x27;usuarios&#x27;, JSON.stringify(this.listaUsuarios));
-      }
+      this.usuarioService.actualizarUsuario(this.usuariologeado.id, this.usuariologeado).subscribe(edit &#x3D;&gt; {
+        console.log(&#x27;Usuario Editado Exitosamente&#x27;, edit);
+        this.obtenerTodosLosUsuarios();  
+      }, error &#x3D;&gt; {
+        console.error(&#x27;Ocurrio un error al agregar un usuario:&#x27;, error);
+      });
 
       alert(&#x27;Usuario actualizado correctamente.&#x27;);
 
@@ -1152,7 +1235,7 @@ export class EditarPerfilComponent {
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
         var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><main class="container mt-5">    <h1 class="titulo-pagina">Actualizar Datos</h1>    <br>    <br>    <form [formGroup]="updateForm" (ngSubmit)="actualizarUsuario()">        <div class="row">            <div class="col-sm-12">                <div class="mb-3">                    <label for="nombreCompleto" class="form-label">Nombre Completo*:</label>                    <input type="text" class="form-control" id="nombreCompleto" aria-describedby="nombreCompletoHelp" formControlName="nombreCompleto">                    <div id="nombreCompletoHelp" class="form-text" *ngIf="updateForm.get(\'nombreCompleto\')?.hasError(\'required\')">Este campo es obligatorio</div>                </div>            </div>        </div>        <div class="row">            <div class="col-sm-12 col-md-6">                <div class="mb-3">                    <label for="correoUsuario" class="form-label">Correo*:</label>                    <input type="email" class="form-control" id="correoUsuario" aria-describedby="emailHelp" formControlName="correoUsuario">                    <div id="emailHelp" class="form-text" *ngIf="updateForm.get(\'correoUsuario\')?.hasError(\'required\')">Este campo es obligatorio</div>                    <div id="emailHelp" class="form-text" *ngIf="updateForm.get(\'correoUsuario\')?.hasError(\'email\')">El Correo no es valido</div>                </div>            </div>            <div class="col-sm-12 col-md-6">                <div class="mb-3">                    <label for="fechaNacimientoUsuario" class="form-label">Fecha de Nacimiento*:</label>                    <input type="date" class="form-control" id="fechaNacimientoUsuario"  aria-describedby="fechaHelp"  formControlName="fechaNacimientoUsuario">                    <div id="fechaHelp" class="form-text" *ngIf="updateForm.get(\'fechaNacimientoUsuario\')?.hasError(\'required\')">Este campo es obligatorio. Debes ser mayor de 13 años.</div>                    <div id="fechaHelp" class="form-text" *ngIf="updateForm.get(\'fechaNacimientoUsuario\')?.hasError(\'menorDeEdad\')">Debes ser mayor de 13 años para registrarte al sitio.</div>                </div>            </div>        </div>        <div class="row">            <div class="col-sm-12 col-md-6">                <div class="mb-3">                    <label for="contrasenaUsuario1" class="form-label">Contraseña*:</label>                    <input type="password" class="form-control" id="contrasenaUsuario1" aria-describedby="passHelp1" formControlName="contrasenaUsuario1" name="contrasenaUsuario1">                    <div id="passHelp1" class="form-text" *ngIf="updateForm.get(\'contrasenaUsuario1\')?.hasError(\'required\')">Este campo es obligatorio</div>                    <div id="passHelp1" class="form-text" *ngIf="updateForm.get(\'contrasenaUsuario1\')?.hasError(\'contrasenaInvalida\')">                        La contraseña debe contener entre 6 y 18 caracteres, al menos un número y una letra mayúscula.                      </div>                </div>            </div>            <div class="col-sm-12 col-md-6">                <div class="mb-3">                    <label for="contrasenaUsuario2" class="form-label">Validar Contraseña*:</label>                    <input type="password" class="form-control" id="contrasenaUsuario2" aria-describedby="passHelp2" formControlName="contrasenaUsuario2" name="contrasenaUsuario2">                    <div id="passHelp2" class="form-text" *ngIf="updateForm.get(\'contrasenaUsuario2\')?.hasError(\'required\')">Este campo es obligatorio</div>                    <div id="passHelp2" class="form-text" *ngIf="updateForm.hasError(\'contrasenasNoCoinciden\')">                        Las contraseñas no coinciden.                      </div>                </div>            </div>        </div>        <div class="row">            <label for="direccionDespacho" class="form-label">Dirección de despacho:</label>            <input type="text" class="form-control" id="direccionDespacho" formControlName="direccionDespacho">        </div>        <div class="row">            <div class="col-6">                <button type="submit" class="btn btn-primary">Actualizar</button>            </div>        </div>    </form></main><app-footer></app-footer></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'EditarPerfilComponent', 'selector': 'app-editar-perfil'},{'name': 'EditarProductosComponent', 'selector': 'app-editar-productos'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'InicioAdminComponent', 'selector': 'app-inicio-admin'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'ListaUsuariosComponent', 'selector': 'app-lista-usuarios'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'NavbaradminComponent', 'selector': 'app-navbaradmin'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'ProductosComponent', 'selector': 'app-productos'},{'name': 'RecuperarContrasenaComponent', 'selector': 'app-recuperar-contrasena'},{'name': 'RegistroComponent', 'selector': 'app-registro'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'EditarPerfilComponent'};
 </script>
